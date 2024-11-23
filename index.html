@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Money Usage Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Daily Money Usage Tracker</h1>
+        <p>Log how much money you spend each day on different activities</p>
+    </header>
+
+    <main>
+        <form id="moneyForm">
+            <label for="activity">Activity:</label>
+            <input type="text" id="activity" name="activity" placeholder="What are you spending on?" required>
+
+            <label for="amount">Amount Spent ($):</label>
+            <input type="number" id="amount" name="amount" min="0" step="0.01" required>
+
+            <button type="submit">Log Expense</button>
+        </form>
+
+        <section id="expenseLog">
+            <h2>Today's Expenses</h2>
+            <ul id="expenseList">
+                <!-- Expenses will be listed here -->
+            </ul>
+        </section>
+
+        <section id="totalExpense">
+            <h2>Total Amount Spent Today: $<span id="totalAmount">0.00</span></h2>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Daily Money Tracker</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
